@@ -1,12 +1,7 @@
 function nuevoEnemigo () {
     Enemigo = game.createSprite(randint(0, 4), 0)
     for (let index = 0; index < 4; index++) {
-        basic.pause(500)
-        Enemigo.change(LedSpriteProperty.Y, 1)
-    }
-    Enemigo = game.createSprite(randint(0, 4), 0)
-    for (let index = 0; index < 4; index++) {
-        basic.pause(500)
+        basic.pause(10)
         Enemigo.change(LedSpriteProperty.Y, 1)
     }
 }
@@ -22,7 +17,6 @@ cuadradito = game.createSprite(2, 4)
 nuevoEnemigo()
 basic.forever(function () {
     if (Enemigo.isTouching(cuadradito)) {
-        basic.showString("PERDISTE")
         basic.showLeds(`
             # # . # #
             # # . # #
